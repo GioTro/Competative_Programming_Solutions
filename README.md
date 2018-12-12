@@ -1,2 +1,1 @@
-# Kattis
-Mina Kattis Lösningar
+# schule
