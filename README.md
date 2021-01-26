@@ -1,7 +1,2 @@
 # Competative_Programming_Solutions
-My solutions to various open challenges.
-
-TODO:
-The solutions for project euler problems was my first attempts at programming.
-Not all solutions work because I might have played around with them more or they have ridiculous run time.
-Clean the mess up.
+My solutions to various open programming challenges. I wrote these sporadically during my education with varying degree of finess. Some of the solutions for the project euler problems don't work properly.
