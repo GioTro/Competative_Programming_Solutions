@@ -1,8 +1,8 @@
-#Solution to kattis problem source: https://open.kattis.com/problems/filip
+# Solution to kattis problem source: https://open.kattis.com/problems/filip
 
-#handles input
+# handles input
 number1, number2 = (map(int, raw_input().split()))
-#flips the number
+# flips the number
 string1, string2 = str(number1), str(number2)
 string1, string2 = string1[::-1], string2[::-1]
 number1, number2 = int(string1), int(string2)

@@ -1,4 +1,4 @@
-#Solution for Kattis problem source: https://open.kattis.com/problems/bela
+# Solution for Kattis problem source: https://open.kattis.com/problems/bela
 
 def scoreboard(card, dominant):
     string = "AKQJT987"
@@ -8,14 +8,14 @@ def scoreboard(card, dominant):
         if card == string[i]:
             index = i
             break
-    if dominant == True:
+    if dominant:
         return score[0][index]
     else:
         return score[1][index]
 
 
 limit, dominant = (input().split())
-limit = 4*int(limit)
+limit = 4 * int(limit)
 summa = 0
 cards = []
 

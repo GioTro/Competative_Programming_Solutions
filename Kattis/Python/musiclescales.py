@@ -1,5 +1,6 @@
 import sys
 
+
 def getScales():
     tone, semitone = 2, 1
     notes = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']
@@ -16,11 +17,14 @@ def getScales():
         scales.append(scale)
     return scales
 
+
 def read():
     return list(set(list(sys.stdin)[-1].split()))
 
+
 def write(l):
     print('none' if len(l) == 0 else ' '.join(l))
+
 
 def do():
     song = read()
@@ -38,5 +42,6 @@ def do():
             solution.append(scale[0])
 
     write(solution)
+
 
 do()

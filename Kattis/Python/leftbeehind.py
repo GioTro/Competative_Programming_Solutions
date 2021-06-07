@@ -1,7 +1,7 @@
 # problem : https://open.kattis.com/problems/leftbeehind
 
 def solve(p, q):
-    if p+q == 13:
+    if p + q == 13:
         return 'Never speak again.'
     if p == q:
         return 'Undecided.'
@@ -9,8 +9,6 @@ def solve(p, q):
         return 'To the convention.'
     if p < q:
         return 'Left beehind.'
-        
-
 
 
 p, q = 1, 1

@@ -1,5 +1,6 @@
 # Problem : https://open.kattis.com/problems/quiteaproblem
-import sys, re
+import sys
+import re
 
 for line in sys.stdin:
     d = str(line).lower()

@@ -1,4 +1,4 @@
-#Solution for kattis problem source: https://open.kattis.com/problems/cetvrta
+# Solution for kattis problem source: https://open.kattis.com/problems/cetvrta
 
 coordinates = []
 x = []

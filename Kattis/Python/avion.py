@@ -5,11 +5,11 @@ out = ''
 index = 1
 
 for a in answers:
-	if a:
-		out += str(index) + ' '
-	index += 1
+    if a:
+        out += str(index) + ' '
+    index += 1
 
 if out == '':
-	print('HE GOT AWAY!')
+    print('HE GOT AWAY!')
 else:
-	print(out)
+    print(out)

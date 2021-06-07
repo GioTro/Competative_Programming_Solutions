@@ -10,6 +10,7 @@ def solve(l):
             res += 1
     return res
 
-p, q  = map(int, input().split())
+
+p, q = map(int, input().split())
 d = [str(input()) for _ in range(p)]
 print(solve(d) + 1)

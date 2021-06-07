@@ -9,12 +9,11 @@ for i in range(1, 100):
 
 print(factorial)
 digitString = str(factorial)
-suma= []
+suma = []
 
 for i in range(0, len(str(digitString))):
     suma.append(int(str(digitString)[i]))
 
 elapsed = (time.time() - start)
 
-print("The sum %s in %s seconds" % (sum(suma),elapsed))
-    
+print("The sum %s in %s seconds" % (sum(suma), elapsed))

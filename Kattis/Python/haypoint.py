@@ -6,14 +6,13 @@ def solve(s):
         if i in dic:
             res += dic[i]
     return res
-        
-        
+
 
 dic = {}
 p, q = map(int, input().split())
 for _ in range(p):
     h, t = map(str, input().split())
-    dic.update({h : int(t)})
+    dic.update({h: int(t)})
 
 for _ in range(q):
     t = str(input())

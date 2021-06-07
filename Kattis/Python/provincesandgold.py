@@ -1,19 +1,19 @@
 a = list(map(int, raw_input().split()))
-bp = a[0]*3+a[1]*2+a[2]
+bp = a[0] * 3 + a[1] * 2 + a[2]
 res = ""
 
 if bp >= 8:
-	res = "Province or "
+    res = "Province or "
 elif bp >= 5:
-	res = "Duchy or "
+    res = "Duchy or "
 elif bp >= 2:
-	res = "Estate or "
+    res = "Estate or "
 
 if bp >= 6:
-	res += "Gold"
+    res += "Gold"
 elif bp >= 3:
-	res += "Silver"
+    res += "Silver"
 else:
-	res += "Copper"
+    res += "Copper"
 
-print (res)
+print(res)

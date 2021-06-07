@@ -9,10 +9,12 @@ def read(l, n):
     rp = [i.lower() for i in r]
     return solve(r, sorted(rp), n)
 
+
 def construct(l, toReturn):
     for i in range(len(toReturn)):
         toReturn[i] += l[i]
-        
+
+
 def solve(toPrint, order, n):
     toReturn = ["" for _ in range(n)]
     for s in order:
@@ -23,6 +25,7 @@ def solve(toPrint, order, n):
                 break
     return toReturn
 
+
 s = ""
 while True:
     p, q = map(int, input().split())
@@ -31,7 +34,7 @@ while True:
     l = [str(input()) for _ in range(p)]
     r = read(l, p)
     for i in r:
-        s += i+"\n"
+        s += i + "\n"
     s += "\n"
 
 print(s.strip())

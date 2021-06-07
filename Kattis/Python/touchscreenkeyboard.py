@@ -1,18 +1,20 @@
 # Problem : https://open.kattis.com/problems/touchscreenkeyboard
 
 seen = {}
+
+
 def distance(c1, c2):
     if c1 == c2:
         return 0
 
-    if (c1+c2) in seen.keys():
-        return seen[c1+c2]
-    if (c2+c1) in seen.keys():
-        return seen[c2+c1]
-    
+    if (c1 + c2) in seen.keys():
+        return seen[c1 + c2]
+    if (c2 + c1) in seen.keys():
+        return seen[c2 + c1]
+
     keyboard = [['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
-            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
-            ['z', 'x', 'c', 'v', 'b', 'n', 'm']]
+                ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+                ['z', 'x', 'c', 'v', 'b', 'n', 'm']]
 
     rows, hor = [[], []], 0
     for i in keyboard:
@@ -23,11 +25,11 @@ def distance(c1, c2):
             hor -= keyboard.index(i)
             rows[1] = i
     r = (abs(hor) + abs(rows[0].index(c1) - rows[1].index(c2)))
-    seen.update({c1+c2 : r})
-    seen.update({c2+c1 : r})
+    seen.update({c1 + c2: r})
+    seen.update({c2 + c1: r})
     return (abs(hor) + abs(rows[0].index(c1) - rows[1].index(c2)))
-            
-        
+
+
 def solve(s, l):
     res = []
     for i in l:
@@ -37,12 +39,14 @@ def solve(s, l):
         res.append([i, str(d)])
     return res
 
+
 def resolve(l, n):
     res = []
     for i in l:
         res.append(i[0])
     for i in sorted(res):
         print("{} {}".format(str(i), str(n)))
+
 
 p = int(input())
 for _ in range(p):
@@ -65,4 +69,3 @@ for _ in range(p):
             print("{} {}".format(l[0][0], l[0][1]))
         else:
             resolve(l, i)
-                

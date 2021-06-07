@@ -1,11 +1,14 @@
-import math, sys
+import math
+import sys
 
-f = lambda D, V : (D**3 - 6*V/math.pi)**(1/3)
+
+def f(D, V): return (D**3 - 6 * V / math.pi)**(1 / 3)
+
 
 for i in sys.stdin:
-	d, v = map(int, i.split())
-	
-	if d == v == 0:
-		continue
+    d, v = map(int, i.split())
 
-	print(f(d, v))
+    if d == v == 0:
+        continue
+
+    print(f(d, v))

@@ -6,9 +6,9 @@ string = '1 '
 dic = {}
 
 for i in range(len(inp)):
-	dic[inp[i]] = i + 2
+    dic[inp[i]] = i + 2
 
 for i in range(len(inp)):
-	string += str(dic[i]) + ' '
+    string += str(dic[i]) + ' '
 
 print(string)

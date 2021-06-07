@@ -14,10 +14,13 @@ def getFactors(number):
             factors.append(number // potentialFactor)
     return factors
 
+
 logging.debug(getFactors(17))
+
 
 def prime(number):
     return len(getFactors(number)) == 2
+
 
 logging.debug('prime(24) = %s' % (prime(24)))
 logging.debug('prime(17) = %s' % (prime(17)))

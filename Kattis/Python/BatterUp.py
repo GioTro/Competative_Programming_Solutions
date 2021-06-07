@@ -10,4 +10,4 @@ for i in t:
     else:
         score += int(i)
 
-print(float(score/s))
+print(float(score / s))

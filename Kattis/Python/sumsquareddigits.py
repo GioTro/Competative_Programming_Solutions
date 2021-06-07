@@ -8,12 +8,11 @@ def base(n, b):
         n //= b
     return digits[::-1]
 
+
 for i in range(int(input())):
     p, q, r = map(int, input().split())
     p = base(r, q)
     res = 0
     for j in p:
         res += j**2
-    print('{} {}'.format(i+1, res))
-    
-
+    print('{} {}'.format(i + 1, res))

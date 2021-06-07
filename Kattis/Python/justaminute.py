@@ -5,7 +5,7 @@ for _ in range(r):
     p *= 60
     i += p
     j += q
-if j/i <= 1:
+if j / i <= 1:
     print('measurement error')
 else:
-    print('{:.8f}'.format(j/i))
+    print('{:.8f}'.format(j / i))

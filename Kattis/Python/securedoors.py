@@ -1,4 +1,5 @@
-#Solution for kattis problem source: https://open.kattis.com/problems/securedoors
+# Solution for kattis problem source:
+# https://open.kattis.com/problems/securedoors
 
 integer = input()
 entries = []

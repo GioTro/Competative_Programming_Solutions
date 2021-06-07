@@ -8,27 +8,30 @@ Triangle = []
 Hexagonal = []
 Pentagonal = []
 
+
 def tri(number):
-    varA = int(number)+1
-    Tn = int(number)*varA/2
+    varA = int(number) + 1
+    Tn = int(number) * varA / 2
     return int(Tn)
 
 
 def pent(number):
-    varA = 3*int(number)-1
-    Pn = int(number)*varA/2
+    varA = 3 * int(number) - 1
+    Pn = int(number) * varA / 2
     return int(Pn)
 
+
 def hexa(number):
-    varA = 2*int(number)-1
-    Hn = int(number)*varA
+    varA = 2 * int(number) - 1
+    Hn = int(number) * varA
     return int(Hn)
+
 
 i = 1
 
-#This was slow =>
+# This was slow =>
 
-#while True:
+# while True:
 #    Triangle.append(tri(i))
 #    Hexagonal.append(hexa(i))
 #    Pentagonal.append(pent(i))
@@ -39,13 +42,13 @@ i = 1
 
 matches = []
 
-#Marginally faster =>
+# Marginally faster =>
 
 while True:
     Pentagonal.append(pent(i))
     Hexagonal.append(hexa(i))
     i += 1
-    if Pentagonal[-1]>10**10 and Hexagonal[-1]>10**10:
+    if Pentagonal[-1] > 10**10 and Hexagonal[-1] > 10**10:
         logging.debug("Done!")
         break
 
@@ -64,18 +67,16 @@ while True:
     i += 1
 
 
-
 #index = []
-#for i in range(0, len(matches)):
+# for i in range(0, len(matches)):
 #    index.append(int(Triangle.index(matches[i]))+1)
-
-
 
 
 elapsed = (time.time() - start)
 
 #print("The number %s is the %sth Triangle number that is also a Pentagonal and Hexagonal number! Results found in %s seconds!" % (Triangle[index[1]-1], index[1], elapsed))
 
-print("The number %s is the %sth Triangle number that is also a Pentagonal and Hexagonal number! Results found in %s seconds!" % (matches[-1], index[-1], elapsed))
+print("The number %s is the %sth Triangle number that is also a Pentagonal and Hexagonal number! Results found in %s seconds!" %
+      (matches[-1], index[-1], elapsed))
 
-##Works, returns answer in 108 seconds.
+# Works, returns answer in 108 seconds.

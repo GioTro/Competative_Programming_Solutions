@@ -7,4 +7,3 @@ for i in range(0, int(len(str(number)))):
     suma.append(int(str(number)[i]))
 
 print(sum(suma))
-

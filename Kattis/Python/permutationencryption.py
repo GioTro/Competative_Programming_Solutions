@@ -1,12 +1,15 @@
 # Problem : https://open.kattis.com/problems/permutationencryption
 import re
+
+
 def chop(s, n):
     # Add padding
-    while len(s)%n != 0:
+    while len(s) % n != 0:
         s += ' '
 
-    regex = '.{'+str(n)+'}'
+    regex = '.{' + str(n) + '}'
     return re.findall(regex, s)
+
 
 def solve(string, keys, le):
     ret = ''
@@ -19,8 +22,8 @@ def solve(string, keys, le):
         string = string[1:]
         ret += "".join(placeholder)
     return ret
-            
-    
+
+
 while True:
     p = list(map(int, input().split()))
     if p[0] == 0 and len(p) == 1:
@@ -34,6 +37,6 @@ while True:
         # Construct a dictionairy
         mapping, j = {}, 0
         for i in p:
-            mapping.update({i-1:j})
+            mapping.update({i - 1: j})
             j += 1
-        print("'"+solve(string, mapping, t)+"'")
+        print("'" + solve(string, mapping, t) + "'")

@@ -1,4 +1,5 @@
-#Solution for kattis problem source: https://open.kattis.com/problems/apaxiaaans
+# Solution for kattis problem source:
+# https://open.kattis.com/problems/apaxiaaans
 
 def stringmagician(string):
     letter = string[0]
@@ -9,5 +10,6 @@ def stringmagician(string):
             name += letter
     return str(name)
 
-#HandleInput
+
+# HandleInput
 print(stringmagician(str(raw_input())))

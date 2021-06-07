@@ -1,13 +1,20 @@
 # Problem : https://open.kattis.com/problems/4thought
 # Some parts are a bit screwed up
 def plus(p, q):
-    return p+q
+    return p + q
+
+
 def minus(p, q):
     return p - q
+
+
 def divide(p, q):
-    return int(p/q)
+    return int(p / q)
+
+
 def mult(p, q):
-    return p*q
+    return p * q
+
 
 def st(res, t, index):
     l, j = [], 0
@@ -19,6 +26,7 @@ def st(res, t, index):
             l.append(res[j])
             j += 1
     return l
+
 
 def eval(s):
     res, index, sp = [4, 4, 4, 4], 0, s.copy()
@@ -52,6 +60,7 @@ def eval(s):
     s = sp
     return int(res[0])
 
+
 def succ(s):
     if seq.index(s[0]) == 3:
         s[0] = plus
@@ -64,6 +73,7 @@ def succ(s):
         s[0] = seq[seq.index(s[0]) + 1]
     return s
 
+
 def req(n, sequence):
     t = sequence.copy()
     tp = eval(sequence)
@@ -72,14 +82,15 @@ def req(n, sequence):
             return t
         else:
             return []
-        
+
     if (tp == n):
         return t
     else:
         return req(n, succ(t))
-        
+
+
 seq = [plus, minus, mult, divide]
-dic = {plus : "+", minus : "-", mult : "*", divide : "/"}
+dic = {plus: "+", minus: "-", mult: "*", divide: "/"}
 bas = [plus, plus, plus]
 
 r = int(input())
@@ -90,5 +101,5 @@ for i in d:
     if len(s) == 0:
         print("no solution")
     else:
-        print("4 {} 4 {} 4 {} 4 = {}".format(dic[s[0]], dic[s[1]], dic[s[2]], i))
-
+        print("4 {} 4 {} 4 {} 4 = {}".format(
+            dic[s[0]], dic[s[1]], dic[s[2]], i))
