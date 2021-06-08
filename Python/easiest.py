@@ -1,5 +1,4 @@
-﻿#Solution for kattis problem source: https://open.kattis.com/problems/easiest
-
+﻿# Solution for kattis problem source: https://open.kattis.com/problems/easiest
 
 
 def sumdigits(number):
@@ -9,30 +8,29 @@ def sumdigits(number):
         summa += int(string[i])
     return summa
 
+
 def brute(number):
     hold = sumdigits(number)
     count = 11
     while True:
-        if sumdigits(number*count) == hold:
+        if sumdigits(number * count) == hold:
             return count
         else:
             count += 1
 
+
 numbertocheck = [1]
 answer = []
 count = 0
-#Handles input
+# Handles input
 while numbertocheck[-1] != 0:
     numbertocheck.append(int(input()))
 
-#executes the calculations
-for i in range(1, len(numbertocheck)-1):
+# executes the calculations
+for i in range(1, len(numbertocheck) - 1):
     answer.append(brute(numbertocheck[i]))
 
-#handleoutput
+# handleoutput
 
 for i in range(0, len(answer)):
     print(answer[i])
-
-
-    

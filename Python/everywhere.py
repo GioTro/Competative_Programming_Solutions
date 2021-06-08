@@ -1,10 +1,12 @@
-#Solution for kattis problem source: https://open.kattis.com/problems/everywhere
+# Solution for kattis problem source: https://open.kattis.com/problems/everywhere
+
 
 def setter(integer):
     mySet = set()
     for i in range(0, integer):
         mySet.add(str(input()))
     return len(mySet)
+
 
 limit = int(input())
 nCities = []

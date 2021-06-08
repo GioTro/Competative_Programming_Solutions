@@ -1,4 +1,4 @@
-#Solution for kattis problem: https://open.kattis.com/problems/grassseed
+# Solution for kattis problem: https://open.kattis.com/problems/grassseed
 
 cost = float(input())
 n_lawn = int(input())
@@ -13,10 +13,6 @@ for i in l:
     prod = 1
     for j in i:
         prod *= float(j)
-    p.append(prod*cost)
+    p.append(prod * cost)
 
 print(sum(p))
-
-
-
-

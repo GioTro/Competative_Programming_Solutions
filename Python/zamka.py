@@ -5,6 +5,7 @@ a = int(input())
 b = int(input())
 c = int(input())
 
+
 def sumDigits(integer, z):
     s = str(integer)
     summa = 0
@@ -15,8 +16,9 @@ def sumDigits(integer, z):
     else:
         return False
 
+
 result = []
-for i in range(a, b+1):
+for i in range(a, b + 1):
     if sumDigits(i, c):
         result.append(i)
     else:

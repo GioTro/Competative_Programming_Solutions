@@ -1,4 +1,4 @@
-#ugly solution for kattis problem source: https://open.kattis.com/problems/trainpassengers
+# ugly solution for kattis problem source: https://open.kattis.com/problems/trainpassengers
 
 data = list(map(int, raw_input().split()))
 Capacity = data[0]
@@ -10,17 +10,17 @@ for i in range(0, iterate):
     data.append(hold)
 
 dontPrint = True
-#Do the calculation
-#special cases
+# Do the calculation
+# special cases
 if data[0][0] > 0 or data[-1][2] > 0 or data[-1][1] > 0:
     print("impossible")
     dontPrint = False
 
-#if data[-1][1]>0:
+# if data[-1][1]>0:
 #    print("impossible")
 #    dontPrint = False
 
-#first case
+# first case
 passengers = data[0][1]
 if passengers > Capacity:
     print("impossible")
@@ -28,9 +28,9 @@ if passengers > Capacity:
 if passengers < Capacity and data[0][2] > 0:
     print("impossible")
     dontPrint = False
-#all remaining cases except last
+# all remaining cases except last
 if dontPrint:
-    for i in range(1, len(data)-1):
+    for i in range(1, len(data) - 1):
         passengers -= data[i][0]
         if passengers < 0:
             print("impossible")
@@ -41,15 +41,15 @@ if dontPrint:
             print("impossible")
             dontPrint = False
             break
-        if passengers < Capacity and data[i][2]>0:
+        if passengers < Capacity and data[i][2] > 0:
             print("impossible")
-            dontPrint =  False
+            dontPrint = False
             break
 
-#EmptyTrain
+# EmptyTrain
 passengers -= data[-1][0]
 
-#if not empty impossible
+# if not empty impossible
 if dontPrint and passengers != 0:
     print("impossible")
     dontPrint = False
